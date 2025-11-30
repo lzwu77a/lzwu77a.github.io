@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Flasky Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Hello from Flask!</h1>
+    
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Flask Logo">
+    
+    <p>This content is being served by a dynamic Flask route.</p>
+
+    </body>
+</html>
