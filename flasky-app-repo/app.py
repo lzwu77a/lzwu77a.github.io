@@ -1,14 +1,14 @@
 # app.py
-from flask import Flask
+from flask import Flask, render_template
 
-# Create the Flask application instance
 app = Flask(__name__)
 
-# Define a simple route
+# 定义一个路由来处理根URL (/)
 @app.route('/')
-def hello_world():
-    return '<h1>Hello from Flasky on Render!</h1>'
+def home():
+    # 使用 render_template() 来渲染 templates/index.html
+    return render_template('index.html')
 
-# This block is for local development only, Render will use Gunicorn
 if __name__ == '__main__':
+    # 在本地运行应用
     app.run(debug=True)
